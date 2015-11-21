@@ -1,0 +1,30 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: d425p0rpnl10h8
+  pool: 5
+  username: lvnatcbuqctufq
+  password: bfuYqByGxbWCv5jCQ_ostCDsLT
+  host:   ec2-54-83-53-120.compute-1.amazonaws.com
+  port: 5432
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: db/test.sqlite3
+
+production:
+  <<: *default
+  database: d425p0rpnl10h8
+  pool: 5
+  username: lvnatcbuqctufq
+  password: bfuYqByGxbWCv5jCQ_ostCDsLT
+  host:   ec2-54-83-53-120.compute-1.amazonaws.com
+  port: 5432
+
