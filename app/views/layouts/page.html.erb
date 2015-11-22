@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Busca Imuebles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="assets/icon/favicon.jpg" type="image/x-icon">
+
+	<!-- GOOGLE WEB FONTS INCLUDE -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
+
+  <!-- STYLESHEETS -->
+	<%= stylesheet_link_tag 'application', media: 'all' %>  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="home page-fullwidth">
+  <!-- START SITE -->
+  <div class="site">
+    <!-- START HEADER -->
+    <header class="noo-header">
+      <!-- START TOP HEADER -->
+      <div class="top-header">
+        <div class="container">
+          <div class="top-header-inner">
+            <ul class="social-top">
+              <li><a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            </ul>
+
+            <div class="top-header-content">
+              <div class="emailto content-item">
+                <a href="mailto:info@citilights.com"><i class="fa fa-envelope-o"></i>&nbsp;Email:contacto@buscaimuebles.com.py</a>
+              </div>
+              <div class="register content-item">
+                <a href="login-register.html"><i class="fa fa-key"></i>&nbsp;Cadastre-se</a>
+              </div>
+              <div class="login content-item">
+                <a href="login-register.html"><i class="fa fa-sign-in"></i>&nbsp;Login</a>
+              </div>
+              <!-- <div class="logout content-item">
+                <a href="#"><i class="fa fa-sign-out"></i>&nbsp;Logout</a>
+              </div> -->
+              <div class="header-search">
+                <label for="input-header-search"><i class="fa fa-search"></i></label>
+                <input type="text" id="input-header-search" placeholder="Search">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END TOP HEADER -->
+
+      <!-- START MAIN NAVIGATION WRAP -->
+      <div class="main-nav-wrap container">
+        <!-- START NAVBAR TOGGLE & LOGO -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="logo">
+            <div class="logo-image">
+              <%= link_to '', root_path %>
+            </div>
+          </div>
+        </div>
+        <!-- END NAVBAR TOGGLE & LOGO -->
+
+        <!-- START CALLING INFO -->
+        <div class="calling-info">
+          <div class="calling-content">
+            <i class="fa fa-mobile"></i>
+            <div class="calling-desc">
+              CONTACTO<br>
+              <span><a href="tel:(+01)-793-7938">(+01)-793-7938</a></span>
+            </div>
+          </div>
+        </div>
+        <!-- END CALLING INFO -->
+
+        <!-- START MAIN NAVIGATION -->
+        <div class="main-navigation">
+          <nav class="collapse navbar-collapse" id="main-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Home&nbsp;<span class="caret"></span></a></li>
+              <li><a href="contact.html">Inmobiliarias&nbsp;<span class="caret"></span></a></li>
+              <li><a href="contact.html">Contactenos&nbsp;<span class="caret"></span></a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- END MAIN NAVIGATION -->
+      </div>
+      <!-- END MAIN NAVIGATION WRAP -->
+    </header>
+    <!-- END HEADER -->
+
+    <!-- START NOO WRAPPER -->
+    <div class="noo-wrapper">
+      <%= yield %>
+    </div>
+    <!-- END NOO WRAPPER -->
+
+    <!-- START FOOTER -->
+    <footer class="footer">
+      <!-- START COPYRIGHT -->
+      <div class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 text-block">
+              &copy; all Rights Reserved.
+              <br />
+              <span>Designed by <a title="Visit Nootheme.com!" href="http://www.chronos.com.py/" target="_blank">Chronos Software</a>.</span>
+              <br>
+            </div>
+            <div class="col-xs-12 col-sm-6 logo-block">
+              <div class="logo-image">
+                <a href="index.html"><img src="assets/logo/logo-footer.png" alt="CitiLights"></a>
+              </div>
+            </div>
+          </div>          
+        </div>
+       
+        <!-- START BACK TO TOP -->
+        <div id="back-to-top" class="back-to-top">
+          <i class="fa fa-angle-up"></i>
+        </div>
+        <!-- END BACK TO TOP -->
+      </div>
+      <!-- END COPYRIGHT -->
+    </footer>
+    <!-- END FOOTER -->
+  </div>
+  <!-- END SITE -->
+
+  <!-- JQUERY PLUGIN -->
+  <%= javascript_include_tag 'application' %>
+</body>
+
+</html>
