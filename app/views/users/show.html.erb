@@ -1,0 +1,60 @@
+<!-- START MAIN CONTENT -->
+<div class="noo-content col-xs-12 col-md-8">
+	<div class="properties list my-properties">
+		<div class="properties-header">
+			<h1 class="page-title">Mi Imuebles (<%= @count_property %>/3)</h1>
+		</div>
+  	<div class="properties-content">
+  	<% @properties.each do |p| %>  	
+  		<article class="hentry">
+		    <div class="property-featured">
+		    <span class="featured"><i class="fa fa-star"></i></span>
+		      <a class="content-thumb" href="property-details.html">
+		        <img src="/assets/property/property1.jpg" alt="">
+		      </a>
+		      <span class="property-category"><a href="#">Apartment</a>
+		      </span>
+		    </div>
+		    <div class="property-wrap">
+		      <h2 class="property-title">
+		        <a href="property-details.html" title="The Helux"><%= p.name %></a>
+		      </h2>
+		      <div class="property-excerpt">
+		        <p>Located on 43rd Street between 10th and 11th Avenue in the hot Midtown West neighborhood...</p>
+		        <p class="property-fullwidth-excerpt"><%= p.description %></p>
+		      </div>
+		      <div class="property-summary">
+		      	<div class="property-detail">
+			        <div class="size">
+			          <span><%= p.area %> m²</span>
+			        </div>
+			        <div class="bathrooms">
+			          <span><%= p.bath_rooms %></span>
+			        </div>
+			        <div class="bedrooms">
+			          <span><%= p.bed_rooms %></span>
+			        </div>
+			      </div>
+			      <div class="property-info">
+			        <div class="property-price">
+			          <span><span class="amount">&#36;<%= p.price %></span></span>
+			        </div>
+			        <div class="property-action">
+			          <div class="agent-action four-buttons">
+			          	<%= link_to edit_property_path(p.id), :data => {toggle: "tooltip", placement: "top"} do %>
+			          		<i class="fa fa-pencil"></i>
+			          	<% end %>
+								  <a class="status-property active" href="#" data-toggle="tooltip" data-placement="top" title="Sold/Rent"><i class="fa fa-check"></i></a>
+								  <a class="featured-property active" data-toggle="tooltip" data-placement="top" title="Featured Property" href="#"><i class="fa fa-star"></i></a>
+								  <a class="delete-property" data-toggle="tooltip" data-placement="top" title="Delete this Property" href="#"><i class="fa fa-times"></i></a>
+								</div>
+			        </div>
+			      </div>
+			    </div>
+		    </div>
+		  </article>
+	  <% end %>
+  	</div>
+	</div>									  		
+</div>	  		
+<!-- END MAIN CONTENT -->

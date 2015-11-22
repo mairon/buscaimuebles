@@ -1,4 +1,4 @@
-var nooGoogleMap = {"latitude":"40.714398","longitude":"-74.005279"};
+var nooGoogleMap = {"latitude":"-25.4812685","longitude":"-54.6240069"};
 var map;
 var infowindow;
 var marker;

@@ -13,7 +13,8 @@
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
 
   <!-- STYLESHEETS -->
-	<%= stylesheet_link_tag 'application', media: 'all' %>  
+	<%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= csrf_meta_tags %>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -39,19 +40,26 @@
               <div class="emailto content-item">
                 <a href="mailto:info@citilights.com"><i class="fa fa-envelope-o"></i>&nbsp;Email:contacto@buscaimuebles.com.py</a>
               </div>
-              <div class="register content-item">
-                <a href="login-register.html"><i class="fa fa-key"></i>&nbsp;Cadastre-se</a>
-              </div>
-              <div class="login content-item">
-                <a href="login-register.html"><i class="fa fa-sign-in"></i>&nbsp;Login</a>
-              </div>
-              <!-- <div class="logout content-item">
-                <a href="#"><i class="fa fa-sign-out"></i>&nbsp;Logout</a>
-              </div> -->
-              <div class="header-search">
-                <label for="input-header-search"><i class="fa fa-search"></i></label>
-                <input type="text" id="input-header-search" placeholder="Search">
-              </div>
+              <% if user_signed_in? %>
+                <div class="login content-item">
+                  <%= current_user.email %>
+                </div>
+                <div class="logout content-item">
+                  <i class="fa fa-sign-out"></i><%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                </div>
+
+              <% else %>
+                <div class="register content-item">
+                  <%= link_to new_user_registration_path do %>
+                    <i class="fa fa-key"></i>&nbsp;Cadastre-se
+                  <% end %>
+                </div>
+                <div class="login content-item">
+                  <%= link_to new_user_session_path do %>
+                    <i class="fa fa-sign-in"></i>&nbsp;Login
+                  <% end %>
+                </div>
+              <% end %>
             </div>
           </div>
         </div>
@@ -95,6 +103,11 @@
               <li class="active"><a href="index.html">Home&nbsp;<span class="caret"></span></a></li>
               <li><a href="contact.html">Inmobiliarias&nbsp;<span class="caret"></span></a></li>
               <li><a href="contact.html">Contactenos&nbsp;<span class="caret"></span></a></li>
+              <% if user_signed_in? %>
+                <li><%= link_to "Mi Painel", user_path(current_user.id) %></li>
+              <% end %>
+
+
             </ul>
           </nav>
         </div>

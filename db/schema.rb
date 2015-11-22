@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151122003143) do
+ActiveRecord::Schema.define(version: 20151122211219) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,63 @@ ActiveRecord::Schema.define(version: 20151122003143) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "options", force: :cascade do |t|
+    t.string   "name",       limit: 30
+    t.boolean  "status",                default: true
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+  end
+
+  create_table "options_properties", force: :cascade do |t|
+    t.integer  "option_id"
+    t.integer  "property_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "plans", force: :cascade do |t|
+    t.string   "name",       limit: 30
+    t.boolean  "status",                default: true
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+  end
+
+  create_table "properties", force: :cascade do |t|
+    t.string   "name",             limit: 50
+    t.decimal  "area",                         precision: 15, scale: 2, default: 0.0
+    t.decimal  "price",                        precision: 15, scale: 2, default: 0.0
+    t.text     "description"
+    t.integer  "interest"
+    t.boolean  "status",                                                default: true
+    t.integer  "user_id"
+    t.integer  "bed_rooms"
+    t.integer  "bath_rooms"
+    t.string   "address",          limit: 100
+    t.integer  "county_id"
+    t.integer  "state_id"
+    t.integer  "city_id"
+    t.string   "latitude",         limit: 50
+    t.string   "longitude",        limit: 50
+    t.string   "video_url",        limit: 150
+    t.integer  "property_type_id"
+    t.datetime "created_at",                                                           null: false
+    t.datetime "updated_at",                                                           null: false
+  end
+
+  create_table "property_options", force: :cascade do |t|
+    t.integer  "property_id"
+    t.integer  "option_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "property_types", force: :cascade do |t|
+    t.string   "name",       limit: 30
+    t.boolean  "status",                default: true
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
   end
 
   create_table "states", force: :cascade do |t|

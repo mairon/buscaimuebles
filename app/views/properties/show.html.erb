@@ -1,0 +1,94 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @property.name %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @property.area %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @property.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @property.description %>
+</p>
+
+<p>
+  <strong>Property type:</strong>
+  <%= @property.property_type_id %>
+</p>
+
+<p>
+  <strong>Interest:</strong>
+  <%= @property.interest %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @property.status %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @property.user_id %>
+</p>
+
+<p>
+  <strong>Bed rooms:</strong>
+  <%= @property.bed_rooms %>
+</p>
+
+<p>
+  <strong>Bath rooms:</strong>
+  <%= @property.bath_rooms %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @property.address %>
+</p>
+
+<p>
+  <strong>County:</strong>
+  <%= @property.county_id %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @property.state_id %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @property.city_id %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @property.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @property.longitude %>
+</p>
+
+<p>
+  <strong>Video url:</strong>
+  <%= @property.video_url %>
+</p>
+
+<p>
+  <strong>Property option:</strong>
+  <%= @property.property_option_id %>
+</p>
+
+<%= link_to 'Edit', edit_property_path(@property) %> |
+<%= link_to 'Back', properties_path %>

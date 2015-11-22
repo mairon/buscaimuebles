@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  area: 9.99
+  price: 9.99
+  description: MyText
+  property_type_id: 1
+  interest: 1
+  status: false
+  user_id: 1
+  bed_rooms: 1
+  bath_rooms: 1
+  address: MyString
+  county_id: 1
+  state_id: 1
+  city_id: 1
+  latitude: MyString
+  longitude: MyString
+  video_url: MyString
+  property_option_id: 1
+
+two:
+  name: MyString
+  area: 9.99
+  price: 9.99
+  description: MyText
+  property_type_id: 1
+  interest: 1
+  status: false
+  user_id: 1
+  bed_rooms: 1
+  bath_rooms: 1
+  address: MyString
+  county_id: 1
+  state_id: 1
+  city_id: 1
+  latitude: MyString
+  longitude: MyString
+  video_url: MyString
+  property_option_id: 1

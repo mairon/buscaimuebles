@@ -1,0 +1,13 @@
+//= require jquery
+//= require jquery_ujs
+//= require jquery.min
+//= require bootstrap.min
+//= require jquery.parallax-1.1.3
+//= require SmoothScroll
+//= require bootstrap3-wysihtml5.custom.min 
+//= require infobox
+//= require markerclusterer
+//= require script
+//= require noo-property-google-map
+//= require property
+//= require data-nooGmapL10n

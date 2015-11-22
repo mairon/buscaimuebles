@@ -1,0 +1,16 @@
+<%= form_for @property_option do |f| %>
+  <% if @property_option.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@property_option.errors.count, "error") %> prohibited this property_option from being saved:</h2>
+
+      <ul>
+      <% @property_option.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
