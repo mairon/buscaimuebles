@@ -13,7 +13,7 @@
               </div>            
               <div class="col-md-6 register-form">
                 <form name="registerform" id="registerform" method="post" role="form">
-                  <div class="logreg-title">Registre-se</div>
+                  <div class="logreg-title">Registrarse</div>
                   <p class="logreg-desc">Ainda não tem uma Conta com a gente, então se cadastre!</p>
                   <div class="form-message"></div>
                   <div class="logreg-content">
@@ -22,7 +22,7 @@
                       <%= f.email_field :email, autofocus: true, placeholder: 'E-mail *', class: 'form-control' %>
                     </div>
                     <div class="form-group">
-                      <label for="user_email" class="sr-only">Contra-Senha</label>
+                      <label for="user_email" class="sr-only">Contraseña</label>
                       <% if @minimum_password_length %>
                       <em>(<%= @minimum_password_length %> characters minimum)</em>
                       <% end %><br />
@@ -33,7 +33,7 @@
                     </div>
                   </div>
                   <div class="logreg-action">
-                      <%= f.submit "Cadastrar", class: "btn navbar-btn" %>
+                      <%= f.submit "Registrar", class: "btn navbar-btn" %>
                       <%= render "devise/shared/links" %>
                   </div>
                 </form>
